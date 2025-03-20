@@ -2,30 +2,32 @@ import {
   StackCardStyleInterpolator,
   createStackNavigator,
 } from '@react-navigation/stack';
-import {LoadingScreen} from '../screens/loading/LoadingScreen';
-import {LoginScreen} from '../screens/auth/LoginScreen';
-import {RegisterScreen} from '../screens/auth/RegisterScreen';
-import {HomeScreen} from '../screens/home/HomeScreen';
-import {ProductScreen} from '../screens/product/ProductScreen';
+import { LoadingScreen } from '../screens/loading/LoadingScreen';
+import { LoginScreen } from '../screens/auth/LoginScreen';
+import { RegisterScreen } from '../screens/auth/RegisterScreen';
+import { HomeScreen } from '../screens/home/HomeScreen';
+import { ProductScreen } from '../screens/product/ProductScreen';
 
+//V-291
 export type RootStackParams = {
   LoadingScreen: undefined;
   LoginScreen: undefined;
   RegisterScreen: undefined;
   HomeScreen: undefined;
-  ProductScreen: {productId: string};
+  ProductScreen: { productId: string };
 };
 
 const Stack = createStackNavigator<RootStackParams>();
 
-const fadeAnimation: StackCardStyleInterpolator = ({current}) => {
-  return {
-    cardStyle: {
-      opacity: current.progress,
-    },
-  };
-};
+// const fadeAnimation: StackCardStyleInterpolator = ({current}) => {
+//   return {
+//     cardStyle: {
+//       opacity: current.progress,
+//     },
+//   };
+// };
 
+//V-291
 export const StackNavigator = () => {
   return (
     <Stack.Navigator
@@ -35,22 +37,22 @@ export const StackNavigator = () => {
         // cardStyleInterpolator: fadeAnimation,
       }}>
       <Stack.Screen
-        options={{cardStyleInterpolator: fadeAnimation}}
+        // options={{ cardStyleInterpolator: fadeAnimation }}
         name="LoadingScreen"
         component={LoadingScreen}
       />
       <Stack.Screen
-        options={{cardStyleInterpolator: fadeAnimation}}
+        //options={{ cardStyleInterpolator: fadeAnimation }}
         name="LoginScreen"
         component={LoginScreen}
       />
       <Stack.Screen
-        options={{cardStyleInterpolator: fadeAnimation}}
+        // options={{ cardStyleInterpolator: fadeAnimation }}
         name="RegisterScreen"
         component={RegisterScreen}
       />
       <Stack.Screen
-        options={{cardStyleInterpolator: fadeAnimation}}
+        //options={{ cardStyleInterpolator: fadeAnimation }}
         name="HomeScreen"
         component={HomeScreen}
       />
