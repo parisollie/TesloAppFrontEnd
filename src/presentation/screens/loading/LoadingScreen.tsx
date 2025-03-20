@@ -1,14 +1,23 @@
-import { Text, View } from 'react-native'
-
+import { Layout, Button, Text, Icon } from '@ui-kitten/components'
+//import { Text, View } from 'react-native'
 //V-290,paso 1.0
 export const LoadingScreen = () => {
+
   return (
-    <View>
-      <Text> Login </Text>
-    </View>
+    <Layout>
+      <Text>HomeScreen</Text>
+
+
+
+
+      <Button>
+        Cerrar sesión
+      </Button>
+
+    </Layout>
   )
 
-}
+};
 // import { Layout, Spinner } from '@ui-kitten/components';
 // import { Text, View } from 'react-native';
 

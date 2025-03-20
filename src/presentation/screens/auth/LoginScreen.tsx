@@ -1,10 +1,11 @@
+//import { Button, Icon, Input, Layout, Text } from '@ui-kitten/components';
 import { Text, View } from 'react-native'
-
 //V-290,paso 1.0
 export const LoginScreen = () => {
+
   return (
     <View>
-      <Text> Login </Text>
+      <Text> Te amo juan pablo Login screen </Text>
     </View>
   )
 

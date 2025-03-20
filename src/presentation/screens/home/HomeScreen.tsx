@@ -1,11 +1,14 @@
-import { Text, View } from 'react-native'
+import { Layout,Button,Text } from '@ui-kitten/components'
 
 //V-290,paso 1.0
 export const HomeScreen = () => {
   return (
-    <View>
-      <Text> Login </Text>
-    </View>
+    <Layout>
+      <Text>HomeScreen</Text>
+      <Button>
+        Cerrar sesión
+      </Button>
+    </Layout>
   )
 
 }
